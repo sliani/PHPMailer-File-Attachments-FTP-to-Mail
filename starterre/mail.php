@@ -6,7 +6,6 @@ require '../src/Exception.php';
 require '../src/PHPMailer.php';
 require '../src/SMTP.php';
 require '../src/FTP.php';
-// Change the values for deploye new project
 require '../src/Models.php';
 require './fileslist.php';
 
@@ -45,6 +44,10 @@ try {
     $mail->Body    = $Body;
     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     $mail->send();
+
+    // Execute this with your Cron Task for remove all files in your FTP Server
+    //header('Location: '."../src/RemoveFilesFTP.php");
+
     echo 'Message has been sent <br>';
 
     // Date Folder

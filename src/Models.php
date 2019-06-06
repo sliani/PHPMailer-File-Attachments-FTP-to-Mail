@@ -6,18 +6,18 @@
 $DebugState = 0;
 $Host       = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
 $SMTPAuth   = true;                                   // Enable SMTP authentication
-$Username   = 'Mail@mail.fr';         // SMTP username
+$Username   = 'mail@mail.fr';         // SMTP username
 $Password   = 'YourPassword';                       // SMTP password
 $SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
 $Port       = 587;                                    // TCP port to connect to
 
 // Variable for your recipients mailer :
-$recipient = 'Mail@mail.fr';          // Principal mail recipient
-$CC        = 'Mail@mail.fr';          // Mail copy
+$recipient = 'mail@mail.fr';          // Principal mail recipient
+$CC        = 'mail@mail.fr';          // Mail copy
 
 // Variable for content mail
-$Subject = 'TEST PFD';                                // Set email format to HTML
-$Body    = 'TEST PFD';
+$Subject = 'TEST Subject';                                // Set email format to HTML
+$Body    = 'TEST Body';
 
 // Variable for FTP Configuration
 $ftp_s         = 'localhost';

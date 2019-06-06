@@ -17,9 +17,16 @@ $login_result = ftp_login($conn_id, $ftp_user_name, $ftp_user_pass);
 // Récupération du contenu d'un dossier
 $contents = ftp_nlist($conn_id, "./public");
 
-// Fermeture de la connexion
-ftp_close($conn_id);
+// Delete all files in the folder ftp after sync with source/public/
+foreach ($contents as $file)
+{
+	ftp_delete($conn_id, $file);
+}
+
+echo "<br> Email success send : <br>";
 
 // Affiche le buffer
-var_dump($contents[0]);
-?>
+var_dump($contents);
+
+// Fermeture de la connexion
+ftp_close($conn_id);

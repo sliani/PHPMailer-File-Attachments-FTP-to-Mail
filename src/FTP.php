@@ -5,7 +5,7 @@
 
 // Change the values for deploye new project
 require '../src/Models.php';
-
+//require '../starterre/fileslist.php';
 function ftp_sync($dir, $conn_id) {
 	if ($dir !== '.') {
 		if (ftp_chdir($conn_id, $dir) === FALSE) {
@@ -33,6 +33,15 @@ function ftp_sync($dir, $conn_id) {
 	ftp_chdir($conn_id, '..');
 	chdir('..');
 }
+
+// function ftp_del(){	
+// 	// Delete all files in the folder ftp after sync with source/public/
+// 	$contents = ftp_nlist($conn_id, './public');
+// 	foreach ($contents as $file)
+// 	{
+// 		ftp_delete($conn_id, $file);
+// 	}
+// }
 
 
 // your settings
